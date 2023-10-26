@@ -1,3 +1,6 @@
+let emailUsuario = prompt("Por favor, ingrese su email:");
+
+
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products');
