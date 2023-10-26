@@ -1,0 +1,249 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1500px;
+    font-family: 'Lato';
+    color: #333;
+    font-family: 'Signika Negative', sans-serif;}
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0 40px 0;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 35px;
+    color: black;
+
+}
+
+.material-symbols-outlined {
+
+    font-size: 44px;
+  }
+
+.iconn{
+    width: 100px;
+    height: 100px;
+}
+  
+
+
+
+.logo-tienda{
+    display: flex;
+    font-family: 'Sedgwick Ave Display', cursive;
+
+}
+
+.container-icon{
+    position: relative;
+    display: flex;
+
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+
+
+
+/* Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem 10%;
+    justify-items: center;
+    grid-template-rows: max-content;
+}
+
+.item{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 270px;
+    height: 500px;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.info-product{
+    padding: 10px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-add-cart{
+    width: 190px;
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+.price{
+    font-size: 28px;
+    font-weight: 900;
+}
+
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #1A9AD1;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
