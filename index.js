@@ -1,5 +1,4 @@
-let emailUsuario = prompt("Por favor, ingrese su email:");
-
+// let emailUsuario = prompt("Por favor, ingrese su email:");
 
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector(
@@ -16,7 +15,8 @@ const rowProduct = document.querySelector('.row-product');
 const productsList = document.querySelector('.container-items');
 
 // Variable de arreglos de Productos
-let allProducts = [];
+
+let allProducts = JSON.parse(localStorage.getItem("Guardarcarrito")) || [];
 
 const valorTotal = document.querySelector('.total-pagar');
 
@@ -54,6 +54,7 @@ productsList.addEventListener('click', e => {
 		}
 
 		showHTML();
+		saveLocal();
 	}
 });
 
@@ -124,5 +125,20 @@ const showHTML = () => {
 	});
 
 	valorTotal.innerText = `$${total}`;
+
 	countProducts.innerText = totalOfProducts;
 };
+
+
+
+// ser item localstorage
+
+const saveLocal = () => {
+	localStorage.setItem("Guardarcarrito", JSON.stringify (allProducts));
+};
+
+const carritoLength = allProducts.length;
+
+localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+
+countProducts.innerText = JSON.parse(localStorage.getItem("carritoLength"));
