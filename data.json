@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Buzo Adidas",
+      "price": 220,
+      "quantity": 1
+    },
+    {
+        "id": 2,
+        "title": "Medias Vans",
+        "price": 50,
+        "quantity": 1
+    },
+    {
+        "id": 3,
+        "title": "Remera Travis Scott",
+        "price": 190,
+        "quantity": 1
+    },
+    {
+        "id": 4,
+        "title": "Vans Wayve",
+        "precio": 250,
+        "quantity": 1
+    }
+  ]

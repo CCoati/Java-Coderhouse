@@ -4,6 +4,7 @@ const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products');
 
+
 btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-cart');
 });
@@ -72,6 +73,17 @@ rowProduct.addEventListener('click', e => {
 		showHTML();
 	}
 });
+// ser item localstorage
+
+const saveLocal = () => {
+	localStorage.setItem("Guardarcarrito", JSON.stringify (allProducts));
+};
+
+const carritoLength = allProducts.length;
+
+localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+
+countProducts.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 
 // Funcion para mostrar  HTML
 const showHTML = () => {
@@ -90,6 +102,14 @@ const showHTML = () => {
 
 	let total = 0;
 	let totalOfProducts = 0;
+
+	const getProductos = async () => {
+		const response = await fetch("data.json");
+		const data = await response.json();
+		console.log(data)
+	};
+
+	getProductos();
 
 	allProducts.forEach(product => {
 		const containerProduct = document.createElement('div');
@@ -131,14 +151,38 @@ const showHTML = () => {
 
 
 
-// ser item localstorage
 
-const saveLocal = () => {
-	localStorage.setItem("Guardarcarrito", JSON.stringify (allProducts));
-};
 
-const carritoLength = allProducts.length;
 
-localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
 
-countProducts.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+
+// ALERTA
+
+function alert(){
+	Swal.fire({
+	position: "top-end",
+	icon: "success",
+	title: "Agregado correctamente",
+	showConfirmButton: false,
+	timer: 1000
+  });
+}
+
+async function solicitarEmail() {
+    // Muestra el cuadro de diálogo de SweetAlert2
+    const { value: email } = await Swal.fire({
+      title: "Deja tu email para recibir los nuevos drops de STREETSHOP",
+      input: "email",
+      inputLabel: "Your email address",
+      inputPlaceholder: "Enter your email address",
+      showCancelButton: true, // Muestra el botón de cancelar
+    });
+
+    // Verifica si se ingresó un correo electrónico
+    if (email) {
+      // Muestra un mensaje con el correo electrónico ingresado
+      Swal.fire(`Entered email: ${email}`);
+    }
+  }
+
+

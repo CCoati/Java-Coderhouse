@@ -11,6 +11,9 @@
 		<link rel="stylesheet" href="styles.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<link href="
+		https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css
+		" rel="stylesheet">
 
 	</head>
 	<body>
@@ -28,6 +31,8 @@
 						<span id="contador-productos">0</span>
 					</div>
 				</div>
+
+
 
 				<div class="container-cart-products hidden-cart">
 					<div class="row-product hidden">
@@ -61,7 +66,11 @@
 					<p class="cart-empty">El carrito está vacío</p>
 				</div>
 			</div>
+
+			<button onclick="solicitarEmail()" class="recibir">Recibir novedades</button>
+
 		</header>
+
 		<div class="container-items">
 
 			<div class="item">
@@ -71,7 +80,7 @@
 				<div class="info-product">
 					<h2>Buzo Adidas</h2>
 					<p class="price">$220</p>
-					<button class="btn-add-cart">Añadir al carrito</button>
+					<button onclick="alert()" class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -81,7 +90,7 @@
 				<div class="info-product">
 					<h2>Medias Vans</h2>
 					<p class="price">$50</p>
-					<button class="btn-add-cart">Añadir al carrito</button>
+					<button onclick="alert()" class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -91,7 +100,7 @@
 				<div class="info-product">
 					<h2>Remera Travis Scott</h2>
 					<p class="price">$190</p>
-					<button class="btn-add-cart">Añadir al carrito</button>
+					<button onclick="alert()" class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 			<div class="item">
@@ -101,11 +110,15 @@
 				<div class="info-product">
 					<h2>Vans Wayve</h2>
 					<p class="price">$250</p>
-					<button class="btn-add-cart">Añadir al carrito</button>
+					<button onclick="alert()" class="btn-add-cart">Añadir al carrito</button>
 				</div>
 			</div>
 		</div>
 
 		<script src="index.js"></script>
 	</body>
+
+<script src="
+	https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js
+"></script>
 </html>
